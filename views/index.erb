@@ -4,16 +4,33 @@
   </head>
   <body>
     <h1>Get Access Token for Instagram</h1>
-    <form action="/oauth/connect" method="POST">
+    <div>
       <p>
-      <b>CLIENT ID</b>
-      <input type="text" name="cid" />
+      <strong>Step.1</strong>
+      Setup Instagram API.
+      <a href="http://instagram.com/developer/" target="_blank">http://instagram.com/developer/</a>
+      <br />
+      You have to set 
+      <i>http://atoken4instagram.heroku.com/oauth/callback</i>
+      in CALLBACK URL.
       </p>
+    </div>
+    <div>
       <p>
-      <b>CLIENT SECRET</b>
-      <input type="text" name="csecret" />
+      <strong>Step.2</strong>
+      Submit CLIENT ID and CLIENT SECRET.
       </p>
-      <input type="submit" value="Connect with Instagram" />
-    </form>
+      <form action="/oauth/connect" method="POST">
+        <p>
+        <strong>CLIENT ID</strong>
+        <input type="text" name="cid" />
+        </p>
+        <p>
+        <strong>CLIENT SECRET</strong>
+        <input type="text" name="csecret" />
+        </p>
+        <input type="submit" value="Connect with Instagram" />
+      </form>
+    </div>
   </body>
 </html>
